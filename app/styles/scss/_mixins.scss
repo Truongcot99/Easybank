@@ -1,0 +1,27 @@
+
+// PC
+@mixin  pc {
+  @media (min-width: 64em) {
+    @content;
+  }
+}
+
+// Tablet & Mobile
+@mixin  tablet-mobile {
+  @media (max-width: 63.9375em) {
+    @content;
+  }
+}
+
+// Tablet
+@mixin  tablet {
+  @media (min-width: 46.25em) and (max-width: 63.9375em) {
+    @content;
+  }
+}
+
+@mixin  mobile {
+  @media (max-width: 45.1875em) {
+    @content;
+  }
+}

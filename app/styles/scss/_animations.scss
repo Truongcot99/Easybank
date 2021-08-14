@@ -1,0 +1,22 @@
+@keyframes faceIn {
+    from {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes faceOut {
+    from {
+        transform: scaleY(0)
+    }
+    to {
+        transform: scaleY(1)
+    }
+}

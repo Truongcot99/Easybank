@@ -1,0 +1,78 @@
+@import "variables";
+@import "mixins";
+
+.articles {
+    background-color: $veryLight;
+  }
+  
+  .article {
+  
+    &__content {
+        
+        h2 {
+            padding: 1.2rem 0 3.6rem 0;
+        }
+
+        @include pc {
+            padding: 2.4rem 0 3.6rem 0;
+        }
+    }
+  
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        @include pc {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+  
+    &__item {
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: $white;
+        box-shadow: 0px 3px 12px rgba(0,0,0,0.15);
+        transition: all 150ms ease-in-out;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+  
+    &__image {
+        height: 20rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+  
+    &__text {
+
+        padding: 3rem 3rem 4rem 3rem;
+        color: $grayishBlue;
+  
+         @include tablet {
+            padding: 3rem 2.5rem;
+         }
+    }
+  
+    &__author {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+  
+    &__title {
+        line-height: 1.2;
+        color: $darkBlue;
+        margin-bottom: 0.8rem;
+    }
+  
+    &__description {
+        font-size: 1.3rem;
+    }
+  }
